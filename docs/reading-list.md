@@ -12,4 +12,5 @@ Useful practice areas:
 - levelized-cost and minimum-selling-price frameworks;
 - Monte Carlo and local/global sensitivity analysis;
 - scenario design for electricity mix, scale, utilization, and coproduct handling;
+- biomass logistics, moisture, nutrient return, and seasonal supply constraints;
 - scale-up assessment for catalytic, electrochemical, and process systems.

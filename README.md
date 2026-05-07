@@ -15,6 +15,7 @@ Use it for:
 - techno-economic analysis and cost-driver review;
 - uncertainty, sensitivity, and scenario analysis;
 - scale-up realism and commercialization-readiness checks;
+- agriculture, biomass, waste-to-value, and bioproduct process audits;
 - electrochemical, catalytic, and process-systems paper audits;
 - manuscript methods planning and interpretation guardrails;
 - turning repeated sustainability assessment routines into reusable agent skills.
@@ -74,11 +75,14 @@ SustainaForge/
     sustainability-assessment-forge/
       SKILL.md
       references/
+        agri-bio-process-audit.md
         electrochemical-systems-audit.md
         lca-boundary-and-functional-unit.md
         tea-cost-driver-and-scale-up.md
         uncertainty-scenario-and-scale-up.md
       templates/
+        agri-bio-process-audit.md
+        agri-bio-process-schema.csv
         lca-tea-audit.md
         lca-tea-extraction-schema.csv
         scale-up-readiness-checklist.md

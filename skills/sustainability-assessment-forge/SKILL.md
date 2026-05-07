@@ -1,6 +1,6 @@
 ---
 name: sustainability-assessment-forge
-description: Builds and audits sustainability-assessment workflows for research papers and emerging technologies. Use for life cycle assessment, LCA, life cycle inventory, LCIA framing, techno-economic analysis, TEA, CAPEX and OPEX review, minimum selling price, levelized cost logic, uncertainty analysis, sensitivity analysis, scenario design, process comparison, scale-up realism, commercialization readiness, electrochemical process papers, catalytic systems, carbon management, circular-economy technologies, agriculture and bioresource process assessment, electricity-mix assumptions, coproduct treatment, functional units, system boundaries, burden shifting, and manuscript-ready sustainability interpretation.
+description: Builds and audits sustainability-assessment workflows for research papers and emerging technologies. Use for life cycle assessment, LCA, life cycle inventory, LCIA framing, techno-economic analysis, TEA, CAPEX and OPEX review, minimum selling price, levelized cost logic, uncertainty analysis, sensitivity analysis, scenario design, process comparison, scale-up realism, commercialization readiness, electrochemical process papers, catalytic systems, carbon management, circular-economy technologies, agriculture and bioresource process assessment, biomass conversion, agricultural residues, waste-to-value systems, anaerobic digestion, biorefineries, fertilizer substitution, electricity-mix assumptions, coproduct treatment, functional units, system boundaries, burden shifting, and manuscript-ready sustainability interpretation.
 ---
 
 # Sustainability Assessment Forge
@@ -22,6 +22,7 @@ Identify:
 - comparator or baseline pathway;
 - system boundary;
 - scale and technology-readiness stage;
+- feedstock type, moisture basis, availability pattern, and logistics assumptions, if an agricultural or bioprocess system is in scope;
 - energy, electricity, heat, and feedstock assumptions;
 - coproduct handling rule;
 - target cost metric or environmental metric;
@@ -35,12 +36,14 @@ Load:
 - `references/lca-boundary-and-functional-unit.md` for goal, scope, boundary, functional unit, allocation, and comparability checks.
 - `references/tea-cost-driver-and-scale-up.md` for CAPEX, OPEX, throughput, utilization, cost metrics, and scale-up realism.
 - `references/uncertainty-scenario-and-scale-up.md` for sensitivity, uncertainty, scenario framing, and interpretation limits.
+- `references/agri-bio-process-audit.md` for agricultural residues, biomass conversion, biofuels, bioproducts, waste-to-value, nutrient loops, logistics, seasonality, and coproduct-heavy systems.
 - `references/electrochemical-systems-audit.md` for electrochemical systems and other energy-intensive process papers.
 
 Use:
 
 - `templates/lca-tea-audit.md` for a structured audit memo;
 - `templates/lca-tea-extraction-schema.csv` for study extraction;
+- `templates/agri-bio-process-audit.md` and `templates/agri-bio-process-schema.csv` for biomass, residue, biorefinery, manure, digestate, biochar, waste-stream, and agriculture-linked process systems;
 - `templates/scenario-sensitivity-matrix.csv` for baseline and alternative cases;
 - `templates/scale-up-readiness-checklist.md` for lab-to-pilot-to-commercial translation.
 
@@ -54,10 +57,11 @@ Use:
 6. Check coproduct treatment and allocation or substitution logic.
 7. Build the TEA basis: capacity, utilization, CAPEX, OPEX, lifetime, financing assumptions, and cost metric.
 8. Separate measured values from assumed values.
-9. Identify the dominant environmental and economic drivers.
-10. Build scenario and sensitivity cases.
-11. Review scale-up realism and deployment bottlenecks.
-12. Write an interpretation that matches what the model can actually support.
+9. For agricultural or bioprocess systems, make feedstock moisture, transport radius, seasonality, coproduct use, and nutrient-return logic explicit.
+10. Identify the dominant environmental and economic drivers.
+11. Build scenario and sensitivity cases.
+12. Review scale-up realism and deployment bottlenecks.
+13. Write an interpretation that matches what the model can actually support.
 
 ## Output Modes
 
@@ -102,6 +106,22 @@ Commercialization bottleneck:
 Bottom-line caution:
 ```
 
+### Agri-Bio Process Audit
+
+```text
+Feedstock:
+Moisture and preprocessing basis:
+Seasonality and storage assumption:
+Transport radius:
+Main conversion route:
+Coproduct and residue handling:
+Nutrient-return logic:
+Hotspot driver:
+Cost bottleneck:
+Most fragile assumption:
+Scale-up caution:
+```
+
 ## Guardrails
 
 - Do not compare systems on different functional units without saying so explicitly.
@@ -110,4 +130,6 @@ Bottom-line caution:
 - Do not let a best-case electricity mix masquerade as a default case.
 - Do not treat a single sensitivity tornado as full uncertainty analysis.
 - Do not infer commercial viability from high selectivity or current density alone.
+- Do not treat residue feedstocks as free, uniform, and always available without discussing collection, moisture, contamination, and competing uses.
+- Do not treat coproduct credits or fertilizer substitution as automatic without a transparent counterfactual.
 - Do not convert lab performance into industrial conclusions without discussing separations, durability, uptime, and balance-of-plant requirements.
