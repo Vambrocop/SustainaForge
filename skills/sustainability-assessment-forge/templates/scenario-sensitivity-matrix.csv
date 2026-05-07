@@ -1,0 +1,5 @@
+scenario_name,scenario_type,what_changes,baseline_value,alternative_value,expected_effect_on_environmental_result,expected_effect_on_cost_result,decision_relevance,notes
+baseline,reference,main reported assumptions,reported case,reported case,anchor,anchor,starting point,use the paper's stated base case
+conservative,scenario,electricity price and utilization,higher utilization and lower power price,lower utilization and higher power price,worse,worse,stress test,tests whether the result survives less favorable operations
+optimistic,scenario,performance and durability,current values,target future values,better,better,target case,do not present as current readiness
+allocation_check,method,coproduct handling,reported rule,alternative rule,can reverse ranking,can reverse ranking,comparability,important when coproducts dominate value or burden

@@ -1,0 +1,5 @@
+* text=auto
+docs/** linguist-documentation
+*.md linguist-language=Markdown
+*.csv linguist-language=CSV
+*.R linguist-language=R
