@@ -102,6 +102,8 @@ SustainaForge/
 - Do not let performance metrics substitute for comparable sustainability metrics.
 - Audit scale-up claims before repeating them.
 
+Recent additions also support safe-boundary and policy-portfolio framing, so the repository can audit papers that compare technical measures with broader sectoral or structural pathways instead of stopping at one intervention.
+
 ## Method Sources
 
 See:

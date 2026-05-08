@@ -1,6 +1,6 @@
 ---
 name: sustainability-assessment-forge
-description: Builds and audits sustainability-assessment workflows for research papers and emerging technologies. Use for life cycle assessment, LCA, life cycle inventory, LCIA framing, techno-economic analysis, TEA, CAPEX and OPEX review, minimum selling price, levelized cost logic, uncertainty analysis, sensitivity analysis, scenario design, process comparison, scale-up realism, commercialization readiness, electrochemical process papers, catalytic systems, carbon management, circular-economy technologies, agriculture and bioresource process assessment, biomass conversion, agricultural residues, waste-to-value systems, anaerobic digestion, biorefineries, fertilizer substitution, electricity-mix assumptions, coproduct treatment, functional units, system boundaries, burden shifting, and manuscript-ready sustainability interpretation.
+description: Builds and audits sustainability-assessment workflows for research papers and emerging technologies. Use for life cycle assessment, LCA, life cycle inventory, LCIA framing, techno-economic analysis, TEA, CAPEX and OPEX review, minimum selling price, levelized cost logic, uncertainty analysis, sensitivity analysis, scenario design, process comparison, scale-up realism, commercialization readiness, electrochemical process papers, catalytic systems, carbon management, circular-economy technologies, agriculture and bioresource process assessment, biomass conversion, agricultural residues, waste-to-value systems, anaerobic digestion, biorefineries, fertilizer substitution, electricity-mix assumptions, coproduct treatment, functional units, system boundaries, burden shifting, safe-boundary framing, policy-portfolio comparison, and manuscript-ready sustainability interpretation.
 ---
 
 # Sustainability Assessment Forge
@@ -38,6 +38,7 @@ Load:
 - `references/uncertainty-scenario-and-scale-up.md` for sensitivity, uncertainty, scenario framing, and interpretation limits.
 - `references/agri-bio-process-audit.md` for agricultural residues, biomass conversion, biofuels, bioproducts, waste-to-value, nutrient loops, logistics, seasonality, and coproduct-heavy systems.
 - `references/electrochemical-systems-audit.md` for electrochemical systems and other energy-intensive process papers.
+- `references/policy-portfolio-and-safe-boundary.md` for safe-boundary framing, multi-sector reduction targets, policy portfolios, co-benefit translation, and cross-domain environmental burden planning.
 
 Use:
 
@@ -45,6 +46,7 @@ Use:
 - `templates/lca-tea-extraction-schema.csv` for study extraction;
 - `templates/agri-bio-process-audit.md` and `templates/agri-bio-process-schema.csv` for biomass, residue, biorefinery, manure, digestate, biochar, waste-stream, and agriculture-linked process systems;
 - `templates/scenario-sensitivity-matrix.csv` for baseline and alternative cases;
+- `templates/policy-portfolio-scenario-schema.csv` for policy-target, sector, technology, and structural-measure comparisons;
 - `templates/scale-up-readiness-checklist.md` for lab-to-pilot-to-commercial translation.
 
 ## Workflow
@@ -61,7 +63,8 @@ Use:
 10. Identify the dominant environmental and economic drivers.
 11. Build scenario and sensitivity cases.
 12. Review scale-up realism and deployment bottlenecks.
-13. Write an interpretation that matches what the model can actually support.
+13. If the paper makes policy-facing claims, separate single measures from portfolio logic and safe-boundary logic.
+14. Write an interpretation that matches what the model can actually support.
 
 ## Output Modes
 
@@ -91,6 +94,21 @@ What changes:
 Why it matters:
 Expected direction:
 Decision relevance:
+```
+
+### Policy Portfolio Memo
+
+```text
+Burden:
+Boundary or target:
+Single-measure option:
+Portfolio option:
+Technical measures:
+Structural measures:
+Main co-benefit:
+Main cost concern:
+Most assumption-sensitive comparison:
+Bottom-line portfolio verdict:
 ```
 
 ### Scale-Up Readiness Memo
@@ -130,6 +148,7 @@ Scale-up caution:
 - Do not let a best-case electricity mix masquerade as a default case.
 - Do not treat a single sensitivity tornado as full uncertainty analysis.
 - Do not infer commercial viability from high selectivity or current density alone.
+- Do not let policy-portfolio language hide the underlying sector and assumption structure.
 - Do not treat residue feedstocks as free, uniform, and always available without discussing collection, moisture, contamination, and competing uses.
 - Do not treat coproduct credits or fertilizer substitution as automatic without a transparent counterfactual.
 - Do not convert lab performance into industrial conclusions without discussing separations, durability, uptime, and balance-of-plant requirements.
