@@ -76,15 +76,19 @@ SustainaForge/
       SKILL.md
       references/
         agri-bio-process-audit.md
+        anaerobic-digestion-microbiome-metabolome.md
         electrochemical-systems-audit.md
         lca-boundary-and-functional-unit.md
+        policy-portfolio-and-safe-boundary.md
         tea-cost-driver-and-scale-up.md
         uncertainty-scenario-and-scale-up.md
       templates/
         agri-bio-process-audit.md
         agri-bio-process-schema.csv
+        anaerobic-digestion-systems-audit.md
         lca-tea-audit.md
         lca-tea-extraction-schema.csv
+        policy-portfolio-scenario-schema.csv
         scale-up-readiness-checklist.md
         scenario-sensitivity-matrix.csv
   docs/
@@ -103,6 +107,7 @@ SustainaForge/
 - Audit scale-up claims before repeating them.
 
 Recent additions also support safe-boundary and policy-portfolio framing, so the repository can audit papers that compare technical measures with broader sectoral or structural pathways instead of stopping at one intervention.
+It also now includes an anaerobic-digestion systems branch for microbiome-metabolome and methane-performance papers.
 
 ## Method Sources
 
