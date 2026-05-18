@@ -37,6 +37,7 @@ Load:
 - `references/tea-cost-driver-and-scale-up.md` for CAPEX, OPEX, throughput, utilization, cost metrics, and scale-up realism.
 - `references/uncertainty-scenario-and-scale-up.md` for sensitivity, uncertainty, scenario framing, and interpretation limits.
 - `references/agri-bio-process-audit.md` for agricultural residues, biomass conversion, biofuels, bioproducts, waste-to-value, nutrient loops, logistics, seasonality, and coproduct-heavy systems.
+- `references/spatial-manure-nutrient-optimization.md` for manure management, nutrient recovery, spatial optimization, externality internalization, societal costs, GAMS models, and Zenodo-based reproducibility audits.
 - `references/anaerobic-digestion-microbiome-metabolome.md` for anaerobic digestion, full-scale digesters, microbiome-metabolome coupling, DOM molecular profiling, methane-performance linkage, and monitoring or optimization interpretation.
 - `references/electrochemical-systems-audit.md` for electrochemical systems and other energy-intensive process papers.
 - `references/policy-portfolio-and-safe-boundary.md` for safe-boundary framing, multi-sector reduction targets, policy portfolios, co-benefit translation, and cross-domain environmental burden planning.
@@ -46,6 +47,7 @@ Use:
 - `templates/lca-tea-audit.md` for a structured audit memo;
 - `templates/lca-tea-extraction-schema.csv` for study extraction;
 - `templates/agri-bio-process-audit.md` and `templates/agri-bio-process-schema.csv` for biomass, residue, biorefinery, manure, digestate, biochar, waste-stream, and agriculture-linked process systems;
+- `templates/spatial-nutrient-optimization-reproducibility-audit.md` for spatial manure/nutrient recovery papers with public figure data, model inputs, plotting code, and partial or full optimization reproducibility;
 - `templates/anaerobic-digestion-systems-audit.md` for microbiome-metabolome and performance-coupled anaerobic digestion studies;
 - `templates/scenario-sensitivity-matrix.csv` for baseline and alternative cases;
 - `templates/policy-portfolio-scenario-schema.csv` for policy-target, sector, technology, and structural-measure comparisons;
@@ -142,6 +144,22 @@ Most fragile assumption:
 Scale-up caution:
 ```
 
+### Spatial Nutrient Optimization Audit
+
+```text
+Region:
+Spatial unit:
+Optimization model:
+Scenario set:
+Private costs:
+Externality costs:
+Nutrient-recovery options:
+Public data/code:
+Executable model availability:
+Reproduction level:
+Main missing piece:
+```
+
 ### Anaerobic Digestion Systems Audit
 
 ```text
@@ -170,3 +188,4 @@ Scale-up caution:
 - Do not treat residue feedstocks as free, uniform, and always available without discussing collection, moisture, contamination, and competing uses.
 - Do not treat coproduct credits or fertilizer substitution as automatic without a transparent counterfactual.
 - Do not convert lab performance into industrial conclusions without discussing separations, durability, uptime, and balance-of-plant requirements.
+- Do not call a spatial optimization paper fully reproducible when only figure data, model inputs, or plotting code are public and the executable optimization model is missing.

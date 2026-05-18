@@ -14,3 +14,7 @@ Useful practice areas:
 - scenario design for electricity mix, scale, utilization, and coproduct handling;
 - biomass logistics, moisture, nutrient return, and seasonal supply constraints;
 - scale-up assessment for catalytic, electrochemical, and process systems.
+
+Reusable article paradigms:
+
+- Vingerhoets et al., [*Spatially optimized manure management and nutrient recovery can reduce societal costs in a European livestock production hotspot*](https://doi.org/10.1038/s43016-026-01329-w), *Nature Food* (2026), with [Zenodo data/code](https://doi.org/10.5281/zenodo.18304135). Useful for spatial externality internalization, manure/nutrient recovery optimization, societal-cost scenarios, GAMS input-parameter auditing, and distinguishing figure reproduction from full model reproduction.
