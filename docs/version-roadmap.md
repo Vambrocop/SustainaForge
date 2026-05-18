@@ -21,6 +21,7 @@
 - deeper TEA templates;
 - uncertainty-reporting scripts;
 - case-library structure for paper-derived audits.
+- GAMS + Python setup helpers for optimization-model reproducibility audits.
 
 ## v1.0
 

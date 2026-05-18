@@ -94,10 +94,14 @@ SustainaForge/
         scenario-sensitivity-matrix.csv
         spatial-nutrient-optimization-reproducibility-audit.md
   docs/
+    gams-python-setup.md
     method-sources.md
     reading-list.md
     source-crosswalk.md
     version-roadmap.md
+  tools/
+    gams_smoke_test.py
+    setup_gams_python.ps1
 ```
 
 ## Design Principles
@@ -111,12 +115,14 @@ SustainaForge/
 Recent additions also support safe-boundary and policy-portfolio framing, so the repository can audit papers that compare technical measures with broader sectoral or structural pathways instead of stopping at one intervention.
 It also now includes an anaerobic-digestion systems branch for microbiome-metabolome and methane-performance papers.
 It also includes a spatial manure/nutrient-recovery optimization branch for papers that combine public Zenodo data, GAMS-style model descriptions, geospatial plotting code, externality internalization, and policy scenarios.
+It also includes a GAMS + Python setup helper for local optimization-model reproducibility audits.
 
 ## Method Sources
 
 See:
 
 - [`docs/method-sources.md`](docs/method-sources.md)
+- [`docs/gams-python-setup.md`](docs/gams-python-setup.md)
 - [`docs/source-crosswalk.md`](docs/source-crosswalk.md)
 - [`docs/reading-list.md`](docs/reading-list.md)
 - [`docs/version-roadmap.md`](docs/version-roadmap.md)
