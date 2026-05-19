@@ -1,6 +1,6 @@
 # Irrigation Expansion As A Water-Food-Climate Adaptation Case
 
-Source status: main article and Supporting Information reviewed locally from user-provided PDFs. Public data/code entry identified in the article reference list: Zenodo https://doi.org/10.5281/zenodo.17478972. Full Zenodo package inspection still pending.
+Source status: main article, Supporting Information, and public Zenodo data/code package reviewed. Zenodo record: https://doi.org/10.5281/zenodo.17478972.
 
 Anchor paper:
 
@@ -110,6 +110,57 @@ Use these as inputs to a later SustainaForge scenario or GAMSPy model:
 | Treatment support constraint | propensity score overlap after trimming <0.02 and >0.98 |
 | Field threshold sensitivity | 39, 75, and 100 pixel thresholds all yield similar maize ATE |
 | Public data/code entry | Zenodo `10.5281/zenodo.17478972` |
+
+## Zenodo Inputs For A Scenario Model
+
+The Zenodo package makes this case stronger than a conceptual sustainability example, because it provides both causal-effect summaries and the cleaned point-sample data used to estimate them.
+
+Downloaded and inspected files:
+
+| File | Size | Sustainability use |
+| --- | ---: | --- |
+| `formatted_figureInput.zip` | 139 MB | location/year-level causal-forest outputs for maize and soybean; useful for quick CATE-ranking scenarios; downloaded and path-flattened |
+| `pointSampleMasterData.zip` | 1.81 GB | cleaned sample with yields, irrigation class, soils, weather, groundwater, and distance variables; useful for rebuilding features or adding water/energy constraints; downloaded and extracted |
+| `Deines_etal_2026_EarthsFuture_irrigationExpansion-main.zip` | 27 MB | R Markdown scripts that produce analysis and manuscript figures |
+| `causal_forest_objects.zip` | 21.0 GB | optional saved model objects; not needed for first sustainability extension |
+
+Observed master-data fields include:
+
+```text
+geom_id, irr_type, fips5, adoptionYear, dist_toStream, dist_toPermWater,
+dist_toIrr, state, soil properties, crop suitability indices, groundwater depth,
+year, crop class, corn/soybean yield, LANID irrigation status, temperature,
+precipitation, VPD, aridity, root-zone moisture, groundwater storage, slope
+```
+
+Observed causal-forest output fields include:
+
+```text
+Y, W, w_hat, Y_hat, predictions, yield_diff_perc, state_name, year, crop,
+soil covariates, weather covariates, hydrologic-distance covariates
+```
+
+This means a practical water-food-climate extension can start from:
+
+```text
+benefit_i = predictions_i
+percent_benefit_i = yield_diff_perc_i
+support_i = w_hat_i between 0.02 and 0.98
+hydrologic_proxy_i = groundwater depth + distance to water + aridity/VPD
+```
+
+Then add external sustainability layers:
+
+```text
+water_i
+pumping_energy_i
+energy_price_i
+emissions_factor_i
+irrigation_capex_i
+aquifer_or_watershed_limit_r
+```
+
+Do not optimize irrigation expansion over rows outside common support. The causal forest is an empirical effect surface, not a free extrapolation engine.
 
 For sustainability modeling, do not use the ATE alone. Pair each location with:
 
