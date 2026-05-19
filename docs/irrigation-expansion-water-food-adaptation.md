@@ -1,6 +1,6 @@
 # Irrigation Expansion As A Water-Food-Climate Adaptation Case
 
-Source status: user-provided article summary; full-text and data/code audit pending.
+Source status: main article and Supporting Information reviewed locally from user-provided PDFs. Public data/code entry identified in the article reference list: Zenodo https://doi.org/10.5281/zenodo.17478972. Full Zenodo package inspection still pending.
 
 Anchor paper:
 
@@ -22,6 +22,15 @@ The reusable framing is:
 estimate marginal yield benefit first
 then audit whether the water, energy, cost, and resource constraints make the adaptation sustainable
 ```
+
+The paper's own result gives the empirical first layer:
+
+- maize ATE: 1.53 t/ha, or about 12.6%;
+- soybean ATE: 0.29 t/ha, or about 7.9%;
+- larger effects occur on lower quality soils and in drier, higher-VPD conditions;
+- continued expansion is plausible because benefits appear to have increased over time.
+
+The paper does not by itself close the sustainability question. It explicitly motivates the need to consider regional hydrology, water allocation, nutrient transport, atmospheric feedbacks, and water sustainability.
 
 ## System Boundary For A Sustainability Extension
 
@@ -88,6 +97,30 @@ This is a natural future use case for:
 - Python geospatial processing;
 - scenario matrices.
 
+## Empirical Inputs To Extract From The Paper
+
+Use these as inputs to a later SustainaForge scenario or GAMSPy model:
+
+| Input | Paper-derived value or source |
+| --- | --- |
+| Marginal maize yield benefit | Causal-forest ATE and CATE from `grf` |
+| Marginal soybean yield benefit | Causal-forest ATE and CATE from `grf` |
+| Adoption feasibility proxy | proximity to existing irrigation, groundwater proximity, stream proximity |
+| High-return conditions | lower soil productivity, faster draining soils, higher August VPD |
+| Treatment support constraint | propensity score overlap after trimming <0.02 and >0.98 |
+| Field threshold sensitivity | 39, 75, and 100 pixel thresholds all yield similar maize ATE |
+| Public data/code entry | Zenodo `10.5281/zenodo.17478972` |
+
+For sustainability modeling, do not use the ATE alone. Pair each location with:
+
+- irrigation water requirement;
+- water source or groundwater depth;
+- pumping energy;
+- electricity or fuel emissions factor;
+- infrastructure and operating cost;
+- aquifer or watershed constraint;
+- nutrient-leaching or hydrologic externality proxy where available.
+
 ## Scenario Matrix
 
 | Scenario | What changes | Why it matters |
@@ -98,6 +131,7 @@ This is a natural future use case for:
 | drought-year targeting | prioritize drought-sensitive areas | Tests climate adaptation value |
 | groundwater-protection case | exclude shallow/depleted or stressed aquifers | Avoids adaptation that increases resource risk |
 | carbon-aware pumping | add energy/emissions penalty | Links irrigation to mitigation trade-offs |
+| overlap-safe targeting | allow expansion only where causal-forest overlap is credible | Avoids optimizing over unsupported counterfactuals |
 
 ## Audit Questions
 
