@@ -95,6 +95,7 @@ SustainaForge/
         spatial-nutrient-optimization-reproducibility-audit.md
   docs/
     gams-python-setup.md
+    irrigation-expansion-water-food-adaptation.md
     method-sources.md
     reading-list.md
     source-crosswalk.md
@@ -123,6 +124,7 @@ See:
 
 - [`docs/method-sources.md`](docs/method-sources.md)
 - [`docs/gams-python-setup.md`](docs/gams-python-setup.md)
+- [`docs/irrigation-expansion-water-food-adaptation.md`](docs/irrigation-expansion-water-food-adaptation.md)
 - [`docs/source-crosswalk.md`](docs/source-crosswalk.md)
 - [`docs/reading-list.md`](docs/reading-list.md)
 - [`docs/version-roadmap.md`](docs/version-roadmap.md)

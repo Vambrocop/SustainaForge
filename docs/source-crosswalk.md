@@ -14,3 +14,4 @@
 | `templates/lca-tea-extraction-schema.csv` | Study extraction schema | Makes comparison fields explicit and machine-readable |
 | `templates/scenario-sensitivity-matrix.csv` | Scenario design | Separates baseline, optimistic, conservative, and scale-up cases |
 | `templates/scale-up-readiness-checklist.md` | Translation to deployment | Keeps lab-to-pilot-to-commercial claims disciplined |
+| `docs/irrigation-expansion-water-food-adaptation.md` | Water-food-climate adaptation framing | Turns irrigation yield-effect estimates into scenario, water, energy, cost, and groundwater sustainability questions |

@@ -25,3 +25,17 @@ Common hotspots:
 Interpretation rule:
 
 Agricultural and bioprocess systems often look attractive because the feedstock seems cheap or negative-cost. That can be true, but only after the paper makes logistics, moisture, storage, contamination, coproduct use, and counterfactual handling explicit.
+
+## Irrigation And Agricultural Adaptation
+
+Use this pattern when a paper estimates yield gains from irrigation, drainage, water management, or other agricultural adaptation measures. Deines et al., *Irrigation Expansion in the US Corn Belt: Patterns and Yield Impacts* (*Earth's Future*, DOI: https://doi.org/10.1029/2025EF007566; source audit pending), is a useful example because it links remote-sensed irrigation expansion to crop-yield effects with causal forests.
+
+Do not treat a positive yield effect as a full sustainability recommendation until the study makes the following visible:
+
+- water demand and water source;
+- groundwater stress or renewable water constraint;
+- pumping energy and emissions;
+- infrastructure and operating cost;
+- drought-year versus normal-year performance;
+- crop and nutrient-management interactions;
+- spatial spillovers through humidity, cooling, or downstream water availability.
